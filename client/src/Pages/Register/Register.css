@@ -1,0 +1,77 @@
+.registerContainer
+{    
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 10;
+    margin-top: 100px;
+}
+.registerWrapper{
+   width: 70%;
+   height: 70%;
+   display: flex;
+   
+}
+.registerleft,.registerright{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+.registerlogo{
+    font-size: 70px;
+    font-weight: 800;
+    color: #1775ee;
+    
+    
+}
+.registerbox{
+    height: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    
+}
+.registerinput{
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 22px;
+    padding-left:20px ;
+}
+.registerinput:focus{
+    outline: none;
+}
+.registerbutton{
+  height: 70px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1775ee;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+.registerforget{
+    text-align: center;
+    color: #1775ee;
+}
+.login{
+    height: 70px;
+  width: 60%;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  background-color: #42b72a;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
