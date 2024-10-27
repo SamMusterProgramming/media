@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "proxy": "https://weary-specter-4jwj6rp9x4gxf7xrw-8080.app.github.dev/",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",

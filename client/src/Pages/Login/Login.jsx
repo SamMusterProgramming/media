@@ -13,18 +13,15 @@ export default function Login() {
   const email = useRef();
   const password = useRef();
 
-  const [user,dispatch] = useReducer(AuthReducer,INITIAL_STATE)
-
+  const [user,dispatch] = useReducer(AuthReducer,INITIAL_STATE);
 
   const handleSubmit = (e) => {
-      e.preventDefault()
-      loginCall({email:email.current.value,password:password.current.value} , dispatch);
-   };
-
-  getUsers(); 
-
-//  console.log(dispatch)
-//  console.log(user)
+      e.preventDefault();
+      let d = {}
+      dispatch (loginCall({email:email.current.value,password:password.current.value} ,d ))
+    //   loginCall({email:email.current.value,password:password.current.value} , dispatch);
+      console.log(user)
+    };
   return (
     <div className='loginContainer'>
         <div className="loginWrapper">
@@ -42,7 +39,7 @@ export default function Login() {
                     <input type="password" minLength="6"
                     required placeholder='Password' 
                     className="logininput" ref={password} />
-                    <button className="loginbutton">Log In</button>
+                    <button className="loginbutton" type="submit">Log In</button>
                     <span className="loginforget">Forgot Password</span>
                     <button className="register">Create an account</button>
                 </div>

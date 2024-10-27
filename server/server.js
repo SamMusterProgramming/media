@@ -24,7 +24,7 @@ app.get("/timeline/:userId",async(req,res)=>{
 })
 
 
-app.get("https://weary-specter-4jwj6rp9x4gxf7xrw-8080.app.github.dev/",async(req,res)=>{
+app.get("/",async(req,res)=>{
    const users = await userModel.find()
   res.status(200).json(users)
 })
@@ -62,15 +62,15 @@ app.get('/register', async (req, res) => {
    }
 });
 
-app.post("https://weary-specter-4jwj6rp9x4gxf7xrw-8080.app.github.dev/auth/login", async (req, res) => {
+app.post("/auth/login", async (req, res) => {
    try {
-      console.log(req.body)
+     
      const user = await userModel.findOne({email : req.body.email})
      !user && res.status(404).json("user not found");
      
      const validPassword = await userModel.findOne({password:req.body.password})
      !validPassword && res.status(400).json("wrong password")
- 
+     console.log(user)
      res.status(200).json(user)
    } catch (err) {
      res.status(500).json(err)
