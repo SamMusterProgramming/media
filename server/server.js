@@ -24,9 +24,9 @@ app.get("/timeline/:userId",async(req,res)=>{
 })
 
 
-app.get("/",async(req,res)=>{
-   const post = await postModel.find()
-  res.status(200).json(post)
+app.get("https://weary-specter-4jwj6rp9x4gxf7xrw-8080.app.github.dev/",async(req,res)=>{
+   const users = await userModel.find()
+  res.status(200).json(users)
 })
 
 app.get("/user/:userId", async(req,res)=>{
@@ -62,7 +62,7 @@ app.get('/register', async (req, res) => {
    }
 });
 
-app.post("/auth/login", async (req, res) => {
+app.post("https://weary-specter-4jwj6rp9x4gxf7xrw-8080.app.github.dev/auth/login", async (req, res) => {
    try {
       console.log(req.body)
      const user = await userModel.findOne({email : req.body.email})

@@ -1,7 +1,13 @@
 
-import {AuthActions} from './AuthActions'
 
-const AuthReducer = (state,action) => {
+export const INITIAL_STATE = {
+    user : {},
+    isFetching:false,
+    error:false
+}
+
+
+export const AuthReducer = (state, action) => {
     switch(action.type){
         case "LOGIN_START" :
             return {
@@ -19,7 +25,7 @@ const AuthReducer = (state,action) => {
                     return{
                         user: null, 
                         isFetching : false ,
-                        error : action. payLoad
+                        error : action.payLoad
                     }
             default :
                     return state ;

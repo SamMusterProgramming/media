@@ -8,21 +8,21 @@ import Login from   "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import {Link, Route ,BrowserRouter as Router,Routes} from 'react-router-dom';
 import './App.css'
-import { AuthContext, AuthContextProvider } from "./Components/Context/AuthContext";
+// import { AuthContext, AuthContextProvider } from "./Components/Context/AuthContext";
 
 
 
 function App() {
 
   
-  const {user} = useContext(AuthContext)
   
-  console.log(user)
+ 
   return (
   
     <div className="appWrapper">  
-     { user ? <TopBar profileImg ={user.profileImg} /> : <Login/>}
-      <div >
+    <TopBar/>
+     <Login />
+      {/* <div >
             
             <Routes>
               <Route  path="/"  element={ 
@@ -38,7 +38,7 @@ function App() {
               
              </Routes>  
            
-      </div>    
+      </div>     */}
     </div>
     
   );
